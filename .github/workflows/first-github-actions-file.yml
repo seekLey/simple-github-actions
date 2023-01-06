@@ -2,16 +2,15 @@
 
 name: Run shell commands
 
-# Controls when the workflow will run - Change2
+# Below controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
+  # Triggers the workflow on push request event but only for the "main" branch
   push:
-    branches: [ "main" ]
- 
+    branches: ["main"]
+
 jobs:
-  run-shell-command:
-    runs-on: ubuntu-latest
-    steps:
-        - name: Echo a String
-          run: echo "Hello World, this is my first Github Actions file"
-  
+  run-shell-command:                              # Action which is used to run shell commands
+    runs-on: ubuntu-latest                        # Specify on which server this will run : Ubuntu
+    steps:                                        # Specify steps that it will perform
+      - name: Echo a String                       # Name is a command basically it states which command you want to run
+        run: echo "Hello World, this is my first Github Actions file"       # Run is a command basically it will be executed
