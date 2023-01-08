@@ -1,6 +1,4 @@
-name: owasp_zap_file
-
-on: [push, pull_request]
+on: [push]
 
 jobs:
   zap_scan:
