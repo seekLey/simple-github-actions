@@ -1,23 +1,19 @@
-on: [push, pull_request]
+on: [push]
 
 jobs:
   zap_scan:
     runs-on: ubuntu-latest
-    name: Scan the web application for any vulneabilities
+    name: Scan the webapplication
     steps:
-      - name: checkout
+      - name: Checkout
         uses: actions/checkout@v2
         with:
           ref: master
       - name: ZAP Scan
         uses: zaproxy/action-full-scan@v0.4.0
         with:
+          token: ${{ secrets.GITHUB_TOKEN }}
           docker_name: 'owasp/zap2docker-stable'
           target: 'http://www.testphp.vulnweb.com/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
-
-
-  
-
-
