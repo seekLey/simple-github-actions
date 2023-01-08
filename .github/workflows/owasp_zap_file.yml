@@ -1,3 +1,5 @@
+name: ZAP scan
+
 on: [push]
 
 jobs:
