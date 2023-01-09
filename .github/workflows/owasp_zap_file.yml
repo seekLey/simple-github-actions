@@ -13,8 +13,7 @@ jobs:
       - name: ZAP Scan
         uses: zaproxy/action-baseline@v0.6.1
         with:
-          branch: main
-          token: ${{ secrets.GITHUB_TOKEN }}
+          ref: main
           docker_name: 'owasp/zap2docker-stable'
           target: 'http://testphp.vulnweb.com/'
           rules_file_name: '.zap/rules.tsv'
