@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest                        # Specify on which server this will run : Ubuntu
     steps:                                        # Specify steps that it will perform
       - name: Echo a String                       # Name is a command basically it states which command you want to run
-        run: echo "Hello World, this is my first Github Actions file"       # Run is a command basically it will be executed
+        run: echo "Hello World, this is my first Github Actions file"     # "Run" notifies the system to run this during exection, in this case we are printing message
